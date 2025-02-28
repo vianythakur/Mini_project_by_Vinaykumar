@@ -1,81 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     background-color: #f4f4f4;
 }
 
-h1 {
-    background-color: #081b31;
-    color: white;
-    height: 5rem;
-    line-height: 5rem;
-    margin-bottom: 2rem;
+.calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
 }
 
-.choice {
-    height: 200px;
-    width: 200px;
-    border-radius: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-}
-
-.choice:hover {
-    cursor: pointer;
-    background-color: #081b31;
-}
-
-img {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.choices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-.score-board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-top: 2rem;
-    gap: 5rem;
-}
-
-#user-score,
-#comp-score {
-    font-size: 4rem;
-}
-
-.msg-container {
-    margin-top: 5rem;
-}
-
-#msg {
-    background-color: #081b31;
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #444;
     color: #fff;
-    height: 5rem;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    display: inline;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.equals {
+    grid-column: span 2;
+    background-color: #f39c12;
+}
+
+.equals:hover {
+    background-color: #e67e22;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+button:active {
+    transform: scale(0.95);
 }
